@@ -1,6 +1,11 @@
 package com.example.onthi_17_05;
 
-public class Bill {
+import androidx.annotation.Nullable;
+
+import java.io.Serializable;
+
+public class Bill implements Comparable<Bill>, Serializable {
+    @Nullable
     private int id;
     private String number;
     private double distance;
@@ -14,7 +19,6 @@ public class Bill {
         this.price = price;
         this.percent = percent;
     }
-
     public int getId() {
         return id;
     }
@@ -53,5 +57,13 @@ public class Bill {
 
     public void setPercent(int percent) {
         this.percent = percent;
+    }
+
+    public double getSum(){
+        return price * distance * (100 - percent) / 100;
+    }
+    @Override
+    public int compareTo(Bill o) {
+        return this.number.compareTo(o.getNumber());
     }
 }

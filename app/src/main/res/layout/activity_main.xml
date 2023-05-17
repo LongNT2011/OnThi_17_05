@@ -6,6 +6,7 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
     <EditText
+        android:id="@+id/edt_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Search"/>
@@ -17,6 +18,7 @@
         tools:listitem="@layout/item_bill"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#E81B1B"

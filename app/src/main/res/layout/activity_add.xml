@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UpdateActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E9EBF4"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@color/white"
+            android:text="Số xe:"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/edt_so_xe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@color/white"
+            android:text="Quãng đường(Km):"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/edt_quang_duong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@color/white"
+            android:text="Đơn giá(VNĐ):"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/edt_don_gia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@color/white"
+            android:text="Khuyến mãi(%):"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/edt_khuyen_mai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal"
+        android:layout_gravity="end">
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#DDDBDB"
+            android:textColor="@color/black"
+            android:text="Thêm"/>
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="#DDDBDB"
+            android:textColor="@color/black"
+            android:text="Quay về"/>
+    </LinearLayout>
+
+</LinearLayout>

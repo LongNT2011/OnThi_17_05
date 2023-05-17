@@ -6,6 +6,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Collections;
 import java.util.List;
 
 public class BillAdapter extends BaseAdapter {
@@ -13,6 +14,7 @@ public class BillAdapter extends BaseAdapter {
 
     public void setData(List<Bill> list){
         mListBill = list;
+        Collections.sort(mListBill);
         notifyDataSetChanged();
     }
     @Override
@@ -46,10 +48,9 @@ public class BillAdapter extends BaseAdapter {
         TextView txtSoXe = viewStudent.findViewById(R.id.txt_so_xe);
         TextView txtQuangDuong = viewStudent.findViewById(R.id.txt_quang_duong);
         TextView txtDonGia = viewStudent.findViewById(R.id.txt_don_gia);
-        double tong = student.getPrice() * student.getDistance() * (100 - student.getPercent()) / 100;
         txtSoXe.setText(student.getNumber());
         txtQuangDuong.setText("Quãng đường: " + student.getDistance());
-        txtDonGia.setText(String.valueOf(tong));
+        txtDonGia.setText(String.valueOf(student.getSum()));
         return viewStudent;
     }
 }

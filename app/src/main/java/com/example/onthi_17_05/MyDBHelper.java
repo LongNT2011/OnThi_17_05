@@ -102,4 +102,11 @@ public class MyDBHelper extends SQLiteOpenHelper {
         String query = "SELECT * FROM " + TABLE_NAME;
         return db.rawQuery(query, null);
     }
+
+    public Cursor searchByPrice(double Price) {
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+        String query = "Select * from " + TABLE_NAME + " WHERE ";
+        query += DONGIA + " * " + QUANGDUONG + " * (" + "100 - " + PHANTRAM + " ) / 100 > " + Price;
+        return sqLiteDatabase.rawQuery(query, null);
+    }
 }
